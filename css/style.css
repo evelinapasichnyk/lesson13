@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap');
+
+header{
+    height: 51px;
+    background-color: #E6E6FA
+}
+
+.wrapper{
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.box__container{
+    background: #D8BFD8;
+    opacity: 0.6;
+}
+
+.box__text{
+    text-align: center;
+    line-height: 1.1;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 4px;
+    padding-bottom: 17px;
+}
+
+.box__title,
+.box__list p{
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 7px;
+}
+
+.box__paragraph{
+    font-size: 19px;
+    margin-bottom: 9px;
+}
+
+ul li{
+    font-size: 19px;
+}
+
+ul li:hover{
+    text-decoration-line: underline;
+}
+
+ul li:not(:last-child){
+    margin-bottom: 1px;
+}
+
+.footer{
+    height: 4px;
+    background-color: #BA55D3;
+}
+
+img{
+    max-width: 100%;
+}
+
+.img{
+    width: 200px;
+    height: 200px;
+}
+
+.img:hover{
+    transform: scale(1.5);
+    transition: all 0.8s ease 0s;
+}
+
+.animation__firstobject{
+    background-color: #DDA0DD;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    right: 10px;
+    top: 200px;
+}
+.animation__secondobject{
+    background-color: #E6E6FA;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 70px;
+    top: 300px;
+}
+
+.animation__thirdobject{
+    background-color: #E6E6FA;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 240px;
+    top: 300px;
+}
+
+.animation__fifthobject{
+    background-color: #8A2BE2;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: fixed;
+    right: 265px;
+    top: 310px;
+}
+
+.animation__fourthobject{
+    background-color: #8A2BE2;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: fixed;
+    right: 99px;
+    top: 310px;
+}
+.animation__sixthobject{
+    background-color: #E6E6FA;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    position: fixed;
+    right: 200px;
+    top: 440px;
+}
+
+.animation{
+    animation-name: animation;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation-delay: 1.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes animation{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.car__body{
+    width: 200px;
+    height: 50px;
+    background-color: #8A2BE2;
+    border-radius: 50px 50px 0 0;
+    position: relative;
+    animation: car-drive 3s linear forwards;
+}
+
+
+
+
+
+
+.car__rightwheel{
+    right: 0;
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+    width: 20px;
+    height: 20px;
+    background-color: #BA55D3;
+    border-radius: 50%;
+    outline: 5px dashed purple;
+    animation: wheels 3s linear forwards;
+}
+.car__leftwheel{
+    left: 0;
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+    width: 20px;
+    height: 20px;
+    background-color: #BA55D3;
+    border-radius: 50%;
+    outline: 5px dashed purple;
+    animation: wheels 3s linear forwards;
+}
+
+@keyframes wheels{
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(360deg);
+    }
+    80%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes car-drive{
+    0%{
+        transform: translate(-200%, 0px);
+    }
+    100%{
+        transform: translate(1700px, 0px);
+    }
+}
